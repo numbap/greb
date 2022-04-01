@@ -1,0 +1,426 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-greb-dev-221716-authRole",
+      "UnauthRoleArn": "arn:aws:iam::710846612935:role/amplify-greb-dev-221716-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::710846612935:role/amplify-greb-dev-221716-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-greb-dev-221716-deployment",
+      "UnauthRoleName": "amplify-greb-dev-221716-unauthRole",
+      "StackName": "amplify-greb-dev-221716",
+      "StackId": "arn:aws:cloudformation:us-east-1:710846612935:stack/amplify-greb-dev-221716/622b1230-175d-11ec-a8d5-0ed0a75799cd",
+      "AmplifyAppId": "d2lfz0lbjafaai",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-greb-dev-221716-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
+    }
+  },
+  "auth": {
+    "greb302a7f64": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "frontendAuthConfig": {
+        "loginMechanisms": [
+          "EMAIL"
+        ],
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": []
+        },
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ]
+      },
+      "output": {
+        "UserPoolId": "us-east-1_3iO9w5qwP",
+        "AppClientIDWeb": "7c67rtti5qluk7u6ppfevvoknt",
+        "AppClientID": "3ahoo7cut725ggnn0oehpstn9h",
+        "IdentityPoolId": "us-east-1:16551b7f-6d53-4236-9866-857acf126d4a",
+        "UserPoolArn": "arn:aws:cognito-idp:us-east-1:710846612935:userpool/us-east-1_3iO9w5qwP",
+        "IdentityPoolName": "greb302a7f64_identitypool_302a7f64__dev",
+        "UserPoolName": "greb302a7f64_userpool_302a7f64"
+      },
+      "lastPushTimeStamp": "2022-04-01T21:54:47.702Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-greb-dev-221716-deployment/amplify-cfn-templates/auth/greb302a7f64-cloudformation-template.yml",
+        "logicalId": "authgreb302a7f64"
+      },
+      "lastPushDirHash": "cpEDRwviw9IO5Nf58NQGa8i07F4="
+    }
+  },
+  "function": {
+    "register": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "output": {
+        "Region": "us-east-1",
+        "Arn": "arn:aws:lambda:us-east-1:710846612935:function:register-dev",
+        "Name": "register-dev",
+        "LambdaExecutionRole": "grebLambdaRoleea74e4e3-dev"
+      },
+      "lastPushTimeStamp": "2022-04-01T21:54:47.705Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-greb-dev-221716-deployment/amplify-cfn-templates/function/register-cloudformation-template.json",
+        "logicalId": "functionregister"
+      },
+      "s3Bucket": {
+        "deploymentBucketName": "amplify-greb-dev-221716-deployment",
+        "s3Key": "amplify-builds/register-4e55497167556c6a7156-build.zip"
+      },
+      "lastBuildTimeStamp": "2021-09-24T02:46:12.788Z",
+      "lastBuildType": "PROD",
+      "lastPackageTimeStamp": "2021-09-24T02:46:26.676Z",
+      "distZipFilename": "register-4e55497167556c6a7156-build.zip",
+      "lastPushDirHash": "0mEoXAoDa2OD2gB2fgtq70jhr70="
+    },
+    "stripeHook": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "output": {
+        "Region": "us-east-1",
+        "Arn": "arn:aws:lambda:us-east-1:710846612935:function:stripeHook-dev",
+        "Name": "stripeHook-dev",
+        "LambdaExecutionRole": "grebLambdaRole951daf6f-dev"
+      },
+      "lastPushTimeStamp": "2022-04-01T21:54:47.707Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-greb-dev-221716-deployment/amplify-cfn-templates/function/stripeHook-cloudformation-template.json",
+        "logicalId": "functionstripeHook"
+      },
+      "s3Bucket": {
+        "deploymentBucketName": "amplify-greb-dev-221716-deployment",
+        "s3Key": "amplify-builds/stripeHook-4e3941454e7571456953-build.zip"
+      }
+    },
+    "stripePortal": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "output": {
+        "Region": "us-east-1",
+        "Arn": "arn:aws:lambda:us-east-1:710846612935:function:stripePortal-dev",
+        "Name": "stripePortal-dev",
+        "LambdaExecutionRole": "grebLambdaRolea85e6bcd-dev"
+      },
+      "lastPushTimeStamp": "2022-04-01T21:54:47.735Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-greb-dev-221716-deployment/amplify-cfn-templates/function/stripePortal-cloudformation-template.json",
+        "logicalId": "functionstripePortal"
+      },
+      "s3Bucket": {
+        "deploymentBucketName": "amplify-greb-dev-221716-deployment",
+        "s3Key": "amplify-builds/stripePortal-5032334c4145332b6f6f-build.zip"
+      },
+      "lastBuildTimeStamp": "2022-04-01T21:52:59.567Z",
+      "lastBuildType": "PROD",
+      "lastPackageTimeStamp": "2022-04-01T21:53:05.152Z",
+      "distZipFilename": "stripePortal-5032334c4145332b6f6f-build.zip",
+      "lastPushDirHash": "hh8oxdYBg5axkkjvqof5tQDVFAU="
+    },
+    "lookup": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "output": {
+        "Region": "us-east-1",
+        "Arn": "arn:aws:lambda:us-east-1:710846612935:function:lookup-dev",
+        "Name": "lookup-dev",
+        "LambdaExecutionRole": "grebLambdaRole369c5d91-dev"
+      },
+      "lastPushTimeStamp": "2022-04-01T21:54:47.735Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-greb-dev-221716-deployment/amplify-cfn-templates/function/lookup-cloudformation-template.json",
+        "logicalId": "functionlookup"
+      },
+      "s3Bucket": {
+        "deploymentBucketName": "amplify-greb-dev-221716-deployment",
+        "s3Key": "amplify-builds/lookup-42354653726f46465531-build.zip"
+      },
+      "lastBuildTimeStamp": "2022-04-01T21:52:59.569Z",
+      "lastBuildType": "PROD",
+      "lastPackageTimeStamp": "2022-04-01T21:53:03.064Z",
+      "distZipFilename": "lookup-42354653726f46465531-build.zip",
+      "lastPushDirHash": "RlbtBAKzxREbOxhhxZtdaKlCyK0="
+    },
+    "monthly": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "lastBuildTimeStamp": "2021-09-30T00:43:13.415Z",
+      "lastBuildType": "PROD",
+      "lastPackageTimeStamp": "2021-09-30T00:43:13.458Z",
+      "distZipFilename": "monthly-49685250697a32467237-build.zip",
+      "s3Bucket": {
+        "deploymentBucketName": "amplify-greb-dev-221716-deployment",
+        "s3Key": "amplify-builds/monthly-49685250697a32467237-build.zip"
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-greb-dev-221716-deployment/amplify-cfn-templates/function/monthly-cloudformation-template.json",
+        "logicalId": "functionmonthly"
+      },
+      "lastPushTimeStamp": "2022-04-01T21:54:47.712Z",
+      "output": {
+        "Region": "us-east-1",
+        "Arn": "arn:aws:lambda:us-east-1:710846612935:function:monthly-dev",
+        "Name": "monthly-dev",
+        "LambdaExecutionRole": "grebLambdaRole24bd6e84-dev",
+        "CloudWatchEventRule": "amplify-greb-dev-221716-functionmo-CloudWatchEvent-1OYIR94TRZ2HZ"
+      },
+      "lastPushDirHash": "o/CiSXnuRfmrcNeTNOUWq4vOGIE="
+    },
+    "locationSEO": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "lastBuildTimeStamp": "2021-10-27T20:12:48.834Z",
+      "lastBuildType": "PROD",
+      "lastPackageTimeStamp": "2021-10-27T20:12:52.359Z",
+      "distZipFilename": "locationSEO-6a532f46384a72396362-build.zip",
+      "s3Bucket": {
+        "deploymentBucketName": "amplify-greb-dev-221716-deployment",
+        "s3Key": "amplify-builds/locationSEO-6a532f46384a72396362-build.zip"
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-greb-dev-221716-deployment/amplify-cfn-templates/function/locationSEO-cloudformation-template.json",
+        "logicalId": "functionlocationSEO"
+      },
+      "lastPushTimeStamp": "2022-04-01T21:54:47.714Z",
+      "output": {
+        "Region": "us-east-1",
+        "Arn": "arn:aws:lambda:us-east-1:710846612935:function:locationSEO-dev",
+        "Name": "locationSEO-dev",
+        "LambdaExecutionRole": "grebLambdaRole4d8f20b9-dev"
+      },
+      "lastPushDirHash": "uKjlCE9citLpw+yNAizlABZEXMA="
+    },
+    "stripePortalLocal": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "dependsOn": [],
+      "lastBuildTimeStamp": "2021-10-22T22:41:58.418Z",
+      "lastBuildType": "PROD",
+      "lastPackageTimeStamp": "2021-10-22T22:41:58.479Z",
+      "distZipFilename": "stripePortalLocal-687770382b416e507277-build.zip",
+      "s3Bucket": {
+        "deploymentBucketName": "amplify-greb-dev-221716-deployment",
+        "s3Key": "amplify-builds/stripePortalLocal-687770382b416e507277-build.zip"
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-greb-dev-221716-deployment/amplify-cfn-templates/function/stripePortalLocal-cloudformation-template.json",
+        "logicalId": "functionstripePortalLocal"
+      },
+      "lastPushTimeStamp": "2022-04-01T21:54:47.715Z",
+      "output": {
+        "Region": "us-east-1",
+        "Arn": "arn:aws:lambda:us-east-1:710846612935:function:stripePortalLocal-dev",
+        "Name": "stripePortalLocal-dev",
+        "LambdaExecutionRole": "grebLambdaRole7f6002e7-dev"
+      },
+      "lastPushDirHash": "qk1i+WG6ypdMyCHoPmMWyDh9mcQ="
+    },
+    "listSEO": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "lastBuildTimeStamp": "2021-10-27T02:07:52.032Z",
+      "lastBuildType": "PROD",
+      "lastPackageTimeStamp": "2021-10-27T02:07:52.069Z",
+      "distZipFilename": "listSEO-306a6c52564277476857-build.zip",
+      "s3Bucket": {
+        "deploymentBucketName": "amplify-greb-dev-221716-deployment",
+        "s3Key": "amplify-builds/listSEO-306a6c52564277476857-build.zip"
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-greb-dev-221716-deployment/amplify-cfn-templates/function/listSEO-cloudformation-template.json",
+        "logicalId": "functionlistSEO"
+      },
+      "lastPushTimeStamp": "2022-04-01T21:54:47.719Z",
+      "output": {
+        "Region": "us-east-1",
+        "Arn": "arn:aws:lambda:us-east-1:710846612935:function:listSEO-dev",
+        "Name": "listSEO-dev",
+        "LambdaExecutionRole": "grebLambdaRole82a1d757-dev"
+      },
+      "lastPushDirHash": "MLhDMUJlu8z1TRZF+SuvV1RMJ/0="
+    }
+  },
+  "api": {
+    "stripeHook": {
+      "service": "API Gateway",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "stripeHook",
+          "attributes": [
+            "Name",
+            "Arn"
+          ]
+        }
+      ],
+      "output": {
+        "ApiName": "stripeHook",
+        "RootUrl": "https://qavpqplt6a.execute-api.us-east-1.amazonaws.com/dev",
+        "ApiId": "qavpqplt6a"
+      },
+      "lastPushTimeStamp": "2022-04-01T21:54:47.721Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-greb-dev-221716-deployment/amplify-cfn-templates/api/stripeHook-cloudformation-template.json",
+        "logicalId": "apistripeHook"
+      }
+    },
+    "grebREST": {
+      "service": "AppSync",
+      "providerPlugin": "awscloudformation",
+      "output": {
+        "authConfig": {
+          "defaultAuthentication": {
+            "authenticationType": "AMAZON_COGNITO_USER_POOLS",
+            "userPoolConfig": {
+              "userPoolId": "authgreb302a7f64"
+            }
+          },
+          "additionalAuthenticationProviders": []
+        },
+        "GraphQLAPIIdOutput": "5jaz77ti6bc63jlfxjsabajvdy",
+        "GraphQLAPIEndpointOutput": "https://z5b44tzgkbbg7iskokyypeuqci.appsync-api.us-east-1.amazonaws.com/graphql"
+      },
+      "lastPushTimeStamp": "2022-04-01T21:54:47.723Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-greb-dev-221716-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "logicalId": "apigrebREST"
+      },
+      "lastPushDirHash": "GR3kC+lq/c38pLdHF4VflY/Ot/U="
+    },
+    "stripePortal": {
+      "service": "API Gateway",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "stripePortal",
+          "attributes": [
+            "Name",
+            "Arn"
+          ]
+        }
+      ],
+      "output": {
+        "ApiName": "stripePortal",
+        "RootUrl": "https://diuyvfpf1i.execute-api.us-east-1.amazonaws.com/dev",
+        "ApiId": "diuyvfpf1i"
+      },
+      "lastPushTimeStamp": "2022-04-01T21:54:47.725Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-greb-dev-221716-deployment/amplify-cfn-templates/api/stripePortal-cloudformation-template.json",
+        "logicalId": "apistripePortal"
+      }
+    },
+    "lookup": {
+      "service": "API Gateway",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "lookup",
+          "attributes": [
+            "Name",
+            "Arn"
+          ]
+        }
+      ],
+      "output": {
+        "ApiName": "lookup",
+        "RootUrl": "https://pr0h1ved4i.execute-api.us-east-1.amazonaws.com/dev",
+        "ApiId": "pr0h1ved4i"
+      },
+      "lastPushTimeStamp": "2022-04-01T21:54:47.726Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-greb-dev-221716-deployment/amplify-cfn-templates/api/lookup-cloudformation-template.json",
+        "logicalId": "apilookup"
+      }
+    },
+    "locationSEO": {
+      "service": "API Gateway",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "locationSEO",
+          "attributes": [
+            "Name",
+            "Arn"
+          ]
+        }
+      ],
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-greb-dev-221716-deployment/amplify-cfn-templates/api/locationSEO-cloudformation-template.json",
+        "logicalId": "apilocationSEO"
+      },
+      "lastPushTimeStamp": "2022-04-01T21:54:47.728Z",
+      "output": {
+        "ApiName": "locationSEO",
+        "RootUrl": "https://szi5ieez6i.execute-api.us-east-1.amazonaws.com/dev",
+        "ApiId": "szi5ieez6i"
+      },
+      "lastPushDirHash": "Rqn+Ihk0ZkDuz1Mu5hLjUU9SX/c="
+    },
+    "stripePortalLocal": {
+      "service": "API Gateway",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "stripePortalLocal",
+          "attributes": [
+            "Name",
+            "Arn"
+          ]
+        }
+      ],
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-greb-dev-221716-deployment/amplify-cfn-templates/api/stripePortalLocal-cloudformation-template.json",
+        "logicalId": "apistripePortalLocal"
+      },
+      "lastPushTimeStamp": "2022-04-01T21:54:47.729Z",
+      "output": {
+        "ApiName": "stripePortalLocal",
+        "RootUrl": "https://b0v0kupbcj.execute-api.us-east-1.amazonaws.com/dev",
+        "ApiId": "b0v0kupbcj"
+      },
+      "lastPushDirHash": "PAg2H8T3nmlT2K0gZ4BAV/UQ4RI="
+    },
+    "listSEO": {
+      "service": "API Gateway",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "listSEO",
+          "attributes": [
+            "Name",
+            "Arn"
+          ]
+        }
+      ],
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-greb-dev-221716-deployment/amplify-cfn-templates/api/listSEO-cloudformation-template.json",
+        "logicalId": "apilistSEO"
+      },
+      "lastPushTimeStamp": "2022-04-01T21:54:47.731Z",
+      "output": {
+        "ApiName": "listSEO",
+        "RootUrl": "https://plk6tan9n4.execute-api.us-east-1.amazonaws.com/dev",
+        "ApiId": "plk6tan9n4"
+      },
+      "lastPushDirHash": "xdXxa6jOqUucSSgW6Zb8r79dQE8="
+    }
+  }
+}

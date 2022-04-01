@@ -1,0 +1,36 @@
+type Territory
+  @model
+  @auth(rules: [{ allow: owner }])
+  @key(name: "byOwner", fields: ["owner"]) {
+  id: String!
+  name: String!
+  text: String
+  image: String
+  urlString: String
+  title: String
+  cluster: Float
+  source: String
+  seo2: String 
+  seo: String
+  locations: [Location] @connection(keyName: "byTerritory", fields: ["id"])
+  owner: String
+}
+
+type Location
+  @model
+  @auth(rules: [{ allow: owner }])
+  @key(name: "byTerritory", fields: ["territoryId"]) {
+  id: String!
+  territoryId: String!
+  name: String!
+  lat: Float
+  lon: Float
+  createdAt: String
+}
+
+type Billing @model @auth(rules: [{ allow: owner }]) {
+  id: String!
+  cycleStartDate: String
+  credits: Int
+  level: String
+}

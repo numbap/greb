@@ -1,0 +1,41 @@
+{
+  "paths": [
+    {
+      "name": "/",
+      "lambdaFunction": "stripePortalLocal",
+      "privacy": {
+        "private": true,
+        "auth": [
+          "/POST",
+          "/GET",
+          "/PUT",
+          "/PATCH"
+        ]
+      },
+      "policyResourceName": "/"
+    }
+  ],
+  "resourceName": "stripePortalLocal",
+  "apiName": "stripePortalLocal",
+  "functionArns": [
+    {
+      "lambdaFunction": "stripePortalLocal"
+    }
+  ],
+  "privacy": {
+    "auth": 1,
+    "unauth": 0,
+    "authRoleName": "amplify-greb-dev-221716-authRole",
+    "unAuthRoleName": "amplify-greb-dev-221716-unauthRole"
+  },
+  "dependsOn": [
+    {
+      "category": "function",
+      "resourceName": "stripePortalLocal",
+      "attributes": [
+        "Name",
+        "Arn"
+      ]
+    }
+  ]
+}

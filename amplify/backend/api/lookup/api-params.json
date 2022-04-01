@@ -1,0 +1,42 @@
+{
+  "paths": [
+    {
+      "name": "/",
+      "lambdaFunction": "lookup",
+      "privacy": {
+        "private": true,
+        "auth": [
+          "/POST",
+          "/GET",
+          "/PUT",
+          "/PATCH",
+          "/DELETE"
+        ]
+      },
+      "policyResourceName": "/"
+    }
+  ],
+  "resourceName": "lookup",
+  "apiName": "lookup",
+  "functionArns": [
+    {
+      "lambdaFunction": "lookup"
+    }
+  ],
+  "privacy": {
+    "auth": 1,
+    "unauth": 0,
+    "authRoleName": "amplify-greb-dev-221716-authRole",
+    "unAuthRoleName": "amplify-greb-dev-221716-unauthRole"
+  },
+  "dependsOn": [
+    {
+      "category": "function",
+      "resourceName": "lookup",
+      "attributes": [
+        "Name",
+        "Arn"
+      ]
+    }
+  ]
+}

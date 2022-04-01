@@ -1,0 +1,35 @@
+{
+  "paths": [
+    {
+      "name": "/",
+      "lambdaFunction": "locationSEO",
+      "privacy": {
+        "open": true
+      },
+      "policyResourceName": "/"
+    }
+  ],
+  "resourceName": "locationSEO",
+  "apiName": "locationSEO",
+  "functionArns": [
+    {
+      "lambdaFunction": "locationSEO"
+    }
+  ],
+  "privacy": {
+    "auth": 0,
+    "unauth": 0,
+    "authRoleName": "amplify-greb-dev-221716-authRole",
+    "unAuthRoleName": "amplify-greb-dev-221716-unauthRole"
+  },
+  "dependsOn": [
+    {
+      "category": "function",
+      "resourceName": "locationSEO",
+      "attributes": [
+        "Name",
+        "Arn"
+      ]
+    }
+  ]
+}

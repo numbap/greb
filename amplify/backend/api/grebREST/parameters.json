@@ -1,0 +1,11 @@
+{
+  "AppSyncApiName": "grebREST",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authgreb302a7f64",
+      "Outputs.UserPoolId"
+    ]
+  }
+}
